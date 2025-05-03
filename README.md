@@ -1,30 +1,82 @@
-Project Setup Guide
-This guide provides step-by-step instructions to set up your project environment, including setting up a Python virtual environment using Pipenv, pip, or conda.
+#  AI-Agent-Chatbot-with-FastAPI
 
-Table of Contents
-Setting Up a Python Virtual Environment
-Using pip and venv
-Running the application
-Setting Up a Python Virtual Environment
-Using pip and venv
-Create a Virtual Environment:
+A full-stack, modular AI chatbot system built using **LangGraph**, **FastAPI**, and **Streamlit**. This project lets you interact with powerful LLMs like **OpenAI GPT-4o-mini** and **Groq LLaMA/Mixtral** through a responsive UI, supporting dynamic prompt customization and optional web search capabilities.
+
+---
+
+## Features
+
+* Multiple LLM provider support (OpenAI, Groq)
+* FastAPI backend with LangGraph agent orchestration
+* Intelligent response generation with optional search (Tavily)
+* Streamlit frontend for interactive querying
+* Environment-based API key management (`.env`)
+
+---
+
+##  How to Run Locally
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/your-username/AI-Agent-Chatbot-with-FastAPI.git
+cd AI-Agent-Chatbot-with-FastAPI
+```
+
+### 2. Create and activate a virtual environment
+
+```bash
 python3 -m venv venv
-Activate the Virtual Environment:
-macOS/Linux:
-
 source venv/bin/activate
-Windows:
+```
 
-venv\Scripts\activate
-Install Dependencies:
+### 3. Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-Project Phases and Python Commands
-Phase 1: Create AI Agent
-python3 ai_agent.py
-Phase 2: Setup Backend with FastAPI
-python3 backend.py
-Phase 3: Setup Frontend with Streamlit
-python3 frontend.py
-IMPORTANT
-Make sure backend python script is running in a separate terminal
+### 4. Create a `.env` file
+
+```env
+OPENAI_API_KEY=your_openai_key
+GROQ_API_KEY=your_groq_key
+TAVILY_API_KEY=your_tavily_key
+```
+
+### 5. Run the FastAPI backend
+
+```bash
+python backend.py
+```
+
+### 6. Run the Streamlit frontend
+
+```bash
+streamlit run frontend.py
+```
+
+---
+
+## Example Use Case
+
+Define your custom AI agent (e.g., helpful assistant, research bot), choose the provider and model, enable web search if needed, and ask any question — all in a few clicks.
+
+---
+
+##  Tech Stack
+
+* [LangGraph](https://github.com/langchain-ai/langgraph)
+* [FastAPI](https://fastapi.tiangolo.com/)
+* [Streamlit](https://streamlit.io/)
+* [LangChain](https://python.langchain.com/)
+* [Tavily Search](https://www.tavily.com/)
+* [Groq](https://groq.com/) & [OpenAI](https://openai.com/)
+
+---
+
+## License
+
+MIT – feel free to use, modify, and share.
+
+--
